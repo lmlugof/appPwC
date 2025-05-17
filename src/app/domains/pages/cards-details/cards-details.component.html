@@ -1,0 +1,14 @@
+<div *ngIf="character() as char" class="flex flex-col items-center">
+    <img [src]="char.image" alt="char.name" class="w- full h-64 object-cover rounded-lg mb-6"/>
+    <h2 class="text-3xl font-bold text-center mb-4 font-serif">
+        {{char.name}}
+    </h2>
+
+    <p class="text-gray-700 text-lg leading-relaxed text-center">
+    {{char.name}} is a character... <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iusto fugiat praesentium nostrum voluptatibus repellat consequatur alias velit earum similique recusandae, porro soluta ab amet unde eaque distinctio impedit molestias?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea iure omnis neque eveniet, sint provident tenetur excepturi illo! Accusamus rerum consequuntur cupiditate non rem ratione veniam eos illo ipsa culpa?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea iure omnis neque eveniet, sint provident tenetur excepturi illo! Accusamus rerum consequuntur cupiditate non rem ratione veniam eos illo ipsa culpa?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea iure omnis neque eveniet, sint provident tenetur excepturi illo! Accusamus rerum consequuntur cupiditate non rem ratione veniam eos illo ipsa culpa?
+    </p>
+</div>

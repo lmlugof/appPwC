@@ -1,0 +1,39 @@
+<section class="max-w-screen-xl mx-auto px-4 md:px-12 my-12">
+  <h3 class="text-3xl font-serif mb-8 text-center">Personajes de Rick y Morty</h3>
+
+  <div *ngIf="isLoading()" class="text-center">Cargando</div>
+  <div *ngIf="error()" class="text-red-500 text-center">{{ error() }}</div>
+
+  <div *ngIf="!isLoading() && !error()" id="cards-container"
+       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div *ngFor="let character of characters()"
+         class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+      <img [src]="character.image" [alt]="character.name" class="w-full h-48 object-cover" />
+      <div class="p-6 flex flex-col flex-grow">
+        <h4 class="text-xl font-serif mb-3">{{ character.name }}</h4>
+        <p class="text-gray-700 flex-grow leading-relaxed">
+          Estado: {{ character.status }} <br />
+          Especie: {{ character.species }}
+        </p>
+        <button
+          [routerLink]="['/character', character.id]" class="mt-6 bg-[#d04a02] text-white px-5 py-3 rounded font-semibold hover:bg-[#dcd7d5] hover:text-black duration-1000 transition self-start">
+          Ver detalles
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="info()" class="flex justify-center items-center gap-4 mt-10">
+    <button (click)="goToPrevPage()"
+            [disabled]="!info()?.prev"
+            class="bg-[#d04a02] text-white px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#b03e01] transition">
+      Anterior
+    </button>   
+    <div class="text-gray-700 font-semibold">Página {{ currentPage() }}</div>
+    <button (click)="goToNextPage()"
+            [disabled]="!info()?.next"
+            class="bg-[#d04a02] text-white px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#b03e01] transition">
+      Siguiente
+    </button>
+  </div>
+</section>

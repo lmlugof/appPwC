@@ -1,0 +1,78 @@
+<header class="w-full bg-white shadow-md px-4 md:px-8 py-3 md:py-4 flex items-center">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto w-full">
+        <div class="flex justify-center md:justify-start w-full md:w-auto mb-3:mb-0">
+            <img src="/pwc.png" alt="PwC Logo" class="h-12 md:h-16" />
+            <span class="font-semibold text-base">
+            </span>
+        </div>
+
+        <nav class="hidden md:flex space-x-6 text-sm">
+            <div class="relative">
+                <button (click)="toggleEduMenu()"
+                    class="font-sans text-[17px] text-black font-normal px-4 py-2 rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold">Educación
+                    ejecutiva
+                </button>
+
+                <div *ngIf="eduMenuOpen"
+                    class="absolute left-0 mt-2 w-50 bg-white border-gray-300 rounded-lg shadow-lg z-10">
+
+                    <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/cursos-diplomados"
+                        class="block px-4 py-2 font-sans text-[15px] text-black font-normal rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold">
+                        Cursos y diplomados
+                    </a>
+                    <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/incompany"
+                        class="block px-4 py-2 font-sans text-[15px] text-black font-normalx rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold">
+                        In company
+                    </a>
+                </div>
+            </div>
+
+            <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/home-actualidad-informativa"
+                class="font-sans text-[17px] text-black font-normal px-4 py-2 rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold ">Actualidad
+                informativa</a>
+            <a href="https://login.pwc.com/login/?goto=https:%2F%2Flogin.pwc.com:443%2Fopenam%2Foauth2%2Fauthorize%3Fclient_id%3Durn%253Aclubdelconocimiento.co.pwc.com%26redirect_uri%3Dhttps%253A%252F%252Fclubdelconocimiento.co.pwc.com%252Fpwc-cc%252Fauth%252Flogin%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DaN5VRYVNwDRsNa8acIZhjmShAhbc37BuRwumhq8cxwM%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638830282545875090.NTgzNDczMGEtODVkNS00NWMwLTkxYTQtN2QyMTBlMzRjMmU3NTM3N2VlYmYtZjdlZS00ODkyLTllODYtZDFmMTVhNTI3OTFj%26state%3DCfDJ8O7tkUeFPdFCjGSvVcLPJgEHK5oTxbAlNN-Eo5DPiD2skBnc4_nZ4tK1nKX5B_SK0JbnsOIzan_l8djfe5JXs70iVWrlvN2kpvgnR4BQCzqeB3fvwaqDkbviacm7x-75VYcb4csyQGQwnNUfE1h8-jmdECF1I7qx7TJ31GR6mGuyyuBJtJ_K1z4I8roYMqU2CS9uFCQBFWz5CKJJB_bMguGZy8HMmtSmqjTD8Hb5YUAOdUdogwXW5-3hS3YJ4Ct4WbCp0xe06ljMW4Ebzn293j9ejEcJ6PoEURVrWiZHhcat1Lrs9KxAt-goEv2Sny_J6HiMLO6VMiiHczEgRXg7qbqt0a9jr_LzbM7LGHetVpb5Ix_hLqG1tUwMoztkYKeWcu0r9Monx600bTzttzNiUNUIqspt4PWe91NN1rIZ2UNVMUHMPlxzwaGU640snR1twVeKGL_AoEkjWMhpnXs0sHwe5VCIftIZFw5-yLjruQDF%26x-client-SKU%3DID_NET8_0%26x-client-ver%3D8.0.2.0&realm=%2Fpwc"
+                class="font-sans text-[17px] text-black font-normal px-4 py-2 rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold ">Campus
+                virtual</a>
+            <a href="https://login.pwc.com/login/?goto=https:%2F%2Flogin.pwc.com:443%2Fopenam%2Foauth2%2Fauthorize%3Fclient_id%3Durn%253Aclubdelconocimiento.co.pwc.com%26redirect_uri%3Dhttps%253A%252F%252Fclubdelconocimiento.co.pwc.com%252Fpwc-cc%252Fauth%252Flogin%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3Dm6Qj3wOVWecTcgVM_06wPhi1SCS9U9-CEjGoJU7Qikc%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638830282665580850.NjM2Mjk0ODAtM2RjOS00ZDQ0LWEwODQtODFhYWEwYTkwMzFlYzA0NmIzMWMtNWU0MS00YjMwLTgyNjgtZDRhZWJhYzFkNDAz%26state%3DCfDJ8O7tkUeFPdFCjGSvVcLPJgHl24NfPGN501F2NFL-6rmIOAF5xAJzxalo595mbk2ecv45rOxStx4YPBAqlOo5abxYXz6WKwoZnWynZUKuJKr1aVkxjqfd1361B1t88Hus8wGHg4zTwN1EGsTpli34Xozfygm8XyhWdLOK6X9epJawi5bHysVUNASJYTzI1sTS3cTwx8gge81yu6kPlN8Y9v8h0-Hg_gfirqvsQ9otVe3vmT0yxhEPgPwyyIzSC9szRB1OQvw_BI4fQnD3yXATJFWVKY-Yjgkmb2UcfkgBLgmTYYeEHLXV12zaSbz9QRO0ghEeIZxNH9F_W_dGQDddHQjsn2DP07fqxbPmJ3GEfmHRg_8XGGQMkCzmh8VnLKUIa3hNeTnbMLIlVOgHsnkwzqNCKB8rry7GJozW4-5Yyn7M6_hOXU5wzNbbu669zAGm-n1UAQ_W9bXOquQ5s7yQpQlXkcbXkHep-xaNk9WeYup2%26x-client-SKU%3DID_NET8_0%26x-client-ver%3D8.0.2.0&realm=%2Fpwc"
+                class="font-sans text-[17px] text-black font-normal px-4 py-2 rounded transition duration-2000 hover:bg-[#d04a02] hover:text-white hover:font-bold ">Iniciar
+                sesión</a>
+        </nav>
+    </div>
+</header>
+
+<div class="md:hidden px-4 py-2 flex bg-[#7d7d7d] shadow-sm justify-center">
+    <button (click)="toggleMenu()" class="text-black focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+</div>
+
+<div *ngIf="menuOpen" class="md:hidden bg-[#dedede] w-full">
+    <nav class="flex flex-col text-left">
+        <div>
+            <button (click)="toggleEduMenuResponsive()"
+                class="w-full py-4 text-left px-4 hover:bg-[#d04a02] duration-2000 hover:text-white hover:font-bold transition">
+                Educación ejecutiva
+            </button>
+            <div *ngIf="eduMenuResponsiveOpen" class="flex flex-col bg-gray-100">
+                <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/cursos-diplomados"
+                    class="w-full py-3 px-6 text-sm hover:bg-[#d04a02] hover:text-white hover:font-bold transition duration-1500">Cursos y
+                    diplomados</a>
+                <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/incompany"
+                    class="w-full py-3 px-6 text-sm hover:bg-[#d04a02] hover:text-white hover:font-bold transition duration-1500">In company</a>
+            </div>
+        </div>
+
+        <a href="https://clubdelconocimiento.co.pwc.com/pwc--cc/#/sitioclubconocimiento/home-actualidad-informativa"
+            class="w-full py-4 px-4 hover:bg-[#d04a02] hover:text-white hover:font-bold transition duration-1500">Actualidad informativa</a>
+
+        <a href="https://login.pwc.com/login/..."
+            class="w-full py-4 px-4 hover:bg-[#d04a02] hover:text-white hover:font-bold transition duration-1500">Campus virtual</a>
+
+        <a href="https://login.pwc.com/login/..."
+            class="w-full py-4 px-4 hover:bg-[#d04a02] hover:text-white hover:font-bold font-medium transition duration-1500">Iniciar sesión</a>
+    </nav>
+</div>
